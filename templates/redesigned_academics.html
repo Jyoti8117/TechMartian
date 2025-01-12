@@ -1,0 +1,2114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/src/assets/IIT_Madras_Logo.ico" />
+    <title>Academics - IIT Madras Degree Program_Redesigned</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+      .animate-blink {
+        animation: blink 1s infinite;
+      }
+      .mapContainer {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+      }
+
+      .mapContainer iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      /* Optional: Hover Effect */
+      .mapContainer:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
+
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+  </head>
+  <body style="position: relative; min-height: 100%; top: 0px">
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5NSK6ZMK"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+    <div id="fixedTop" class="fixed top-0 w-full z-50">
+      <section class="bg-white">
+        <div id="google_translate_element" class="hidden">
+          <div class="skiptranslate goog-te-gadget" dir="ltr">
+            <div
+              id=":0.targetLanguage"
+              class="goog-te-gadget-simple"
+              style="white-space: nowrap"
+            >
+              <img
+                src="https://www.google.com/images/cleardot.gif"
+                class="goog-te-gadget-icon"
+                alt=""
+                style="
+                  background-image: url('https://translate.googleapis.com/translate_static/img/te_ctrl3.gif');
+                  background-position: -65px 0px;
+                "
+              />
+              <span style="vertical-align: middle">
+                <a
+                  aria-haspopup="true"
+                  class="VIpgJd-ZVi9od-xl07Ob-lTBxed"
+                  href="#"
+                >
+                  <span>Select Language</span>
+                  <img
+                    src="https://www.google.com/images/cleardot.gif"
+                    alt=""
+                    width="1"
+                    height="1"
+                  />
+                  <span class="border-l-2 border-gray-300">​</span>
+                  <img
+                    src="https://www.google.com/images/cleardot.gif"
+                    alt=""
+                    width="1"
+                    height="1"
+                  />
+                  <span aria-hidden="true" class="text-gray-600">▼</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mr-4">
+          <ul class="flex justify-end space-x-2 m-0 p-0">
+            <li>
+              <a
+                id="english"
+                data-lang="English"
+                class="notranslate text-gray active-lang cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >English</a
+              >
+            </li>
+            <li>
+              <a
+                id="hindi"
+                data-lang="Hindi"
+                class="notranslate text-gray cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >| हिंदी</a
+              >
+            </li>
+            <li>
+              <a
+                id="tamil"
+                data-lang="Tamil"
+                class="notranslate text-gray cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >| தமிழ்</a
+              >
+            </li>
+            <li>
+              <a
+                id="telugu"
+                data-lang="Telugu"
+                class="notranslate text-gray cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >| తెలుగు</a
+              >
+            </li>
+            <li>
+              <a
+                id="malyalam"
+                data-lang="Malayalam"
+                class="notranslate text-gray cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >| മലയാളം</a
+              >
+            </li>
+            <li>
+              <a
+                id="kannada"
+                data-lang="Kannada"
+                class="notranslate text-gray cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >| ಕನ್ನಡ</a
+              >
+            </li>
+            <li>
+              <a
+                id="marathi"
+                data-lang="Marathi"
+                class="notranslate text-gray cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >| मराठी</a
+              >
+            </li>
+            <li>
+              <a
+                id="gujrati"
+                data-lang="Gujarati"
+                class="notranslate text-gray cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >| ગુજરાતી</a
+              >
+            </li>
+            <li>
+              <a
+                id="Banga"
+                data-lang="Bengali"
+                class="notranslate text-gray cursor-pointer"
+                role="button"
+                onclick="changeLanguage(this)"
+                >| বাংলা</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Navbar -->
+      <nav class="bg-white fixed w-full shadow-md">
+        <div class="max-w-screen-xl mx-auto px-4 py-2">
+          <div class="flex justify-between items-center">
+            <a class="navbar-brand" href="index.html">
+              <img
+                class="h-14"
+                src="/src/assets/IIT_Madras_Logo.ico"
+                alt="IIT Madras Online Degree Program"
+              />
+            </a>
+            <button
+              class="navbar-toggler lg:hidden"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbar-default"
+              aria-controls="navbar-default"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-default">
+              <ul class="navbar-nav ml-auto flex space-x-4">
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-primary font-semibold"
+                    href="academics.html"
+                    >Academics</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-semibold" href="admissions.html"
+                    >Admissions</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-semibold" href="resources.html"
+                    >Resources</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-semibold" href="student_life.html"
+                    >Student Life</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-semibold" href="testimonials.html"
+                    >Testimonials</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-semibold" href="events.html"
+                    >Events</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-semibold" href="faq.html">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link font-semibold" href="aboutIITM.html"
+                    >About IITM</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://es.study.iitm.ac.in/"
+                    ><button class="btn btn-sm btn-outline-primary">
+                      SIGN IN
+                    </button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    </div>
+    <button
+      id="scrollToTop"
+      onclick="scrollToTop();"
+      class="scrollToTop bg-primary shadow-lg hover:shadow-xl rounded-full p-3 fixed bottom-4 right-4 text-white focus:outline-none"
+    >
+      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <div id="mainContent" class="mt-28">
+      <!-- Mob Notification -->
+
+      <div id="mobNotification" class="w-full bg-blue-600 py-2">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row justify-center items-center">
+            <p
+              class="text-white text-xl font-semibold mb-2 text-center md:text-left"
+            >
+              <span class="text-yellow-400 font-bold">
+                LIVE<span class="animate-blink">:</span>
+              </span>
+              Applications Open now for January 2025 Batch | Applications Close:
+              January 02, 2025 | Exam: February 23, 2025
+            </p>
+            <a
+              href="https://es.study.iitm.ac.in/"
+              target="_blank"
+              class="md:ml-4 mt-2 md:mt-0"
+            >
+              <button
+                class="bg-white text-black hover:bg-blue-700 hover:text-white px-4 py-2 rounded-md"
+              >
+                APPLY NOW
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Breadcrumbs -->
+      <div
+        class="container-fluid container-md px-36 py-4 bg-transparent flex items-center"
+      >
+        <nav aria-label="breadcrumb" class="bg-transparent">
+          <ol class="breadcrumb pl-0 flex items-center space-x-2 text-lg">
+            <li class="breadcrumb-item">
+              <a
+                href="index.html"
+                class="text-blue-500 hover:text-blue-700 hover:underline transition duration-300"
+              >
+                Home
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <span class="text-gray-500">/</span>
+            </li>
+            <li class="breadcrumb-item active">
+              <span class="text-gray-800">Academics</span>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Overall Structure Section -->
+      <div
+        class="container-fluid container-md px-36 py-4 bg-cyan-300 flex items-center"
+        id="AC1"
+      >
+        <p class="text-3xl font-semibold text-gray-800 ml-4">
+          Overall Structure
+        </p>
+      </div>
+
+      <!-- Content Section -->
+      <div class="container-fluid container-md px-36 py-8 bg-white shadow-md">
+        <p class="text-gray-800 font-medium">
+          The program comprises three levels, and a learner has to successfully
+          complete all three levels to get the BS Degree from IIT Madras.
+        </p>
+        <p class="text-gray-700 mt-2">
+          There is flexibility to exit at any level. Depending on the courses
+          completed and credits earned, the learner can receive a Foundation
+          Certificate from IITM CODE (Centre for Outreach and Digital
+          Education), a Diploma from IIT Madras, or a BS Degree in Electronic
+          Systems from IIT Madras.
+        </p>
+
+        <!-- Academic Flow Section -->
+        <div class="flex flex-col md:flex-row mt-8">
+          <!-- Left Column: Image -->
+          <div class="md:w-1/2 flex justify-center">
+            <img
+              src="/src/assets/academic-flow.jpg"
+              alt="Academic Flow"
+              class="w-3/4"
+            />
+          </div>
+
+          <!-- Right Column: Details -->
+          <div class="md:w-1/2 flex flex-col justify-center mt-6 md:mt-0">
+            <div class="bg-gray-100 p-6 rounded-xl shadow-md">
+              <!-- Courses and Credits -->
+              <div class="flex items-start mb-4">
+                <img src="/src/assets/study_icon.svg" class="w-10 h-10 mr-4" />
+                <div>
+                  <p class="font-semibold text-gray-800 mb-1">
+                    Courses and Credits in Each Level:
+                  </p>
+                  <p class="text-gray-700">
+                    Foundation Level: 43 credits | 9 Theory courses + 5 Labs
+                    <br />
+                    Diploma Level: 43 credits | 9 Theory + 3 Labs + 1 Project
+                    course <br />
+                    BS Degree Level: 56 credits | 12 courses + 1 Lab +
+                    Apprenticeship (optional)
+                  </p>
+                </div>
+              </div>
+
+              <!-- Semester System -->
+              <div class="flex items-start mb-4">
+                <img
+                  src="/src/assets/semester-icon.svg"
+                  class="w-10 h-10 mr-4"
+                />
+                <div>
+                  <p class="font-semibold text-gray-800 mb-1">
+                    Semester System
+                  </p>
+                  <p class="text-gray-700">
+                    Two semesters per year, each with 12 weeks of coursework, 2
+                    in-person invigilated quizzes, and end-semester exams.
+                    Assessments may include programming exams, mini projects,
+                    vivas, and take-home assignments.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Credits for Exit -->
+              <div class="flex items-start mb-4">
+                <img src="/src/assets/credit_.svg" class="w-10 h-10 mr-4" />
+                <div>
+                  <p class="font-semibold text-gray-800 mb-1">
+                    Credits required to exit with:
+                  </p>
+                  <p class="text-gray-700">
+                    Foundation Certificate in Electronic Systems: 43 credits
+                    <br />
+                    Diploma in Electronic Systems: 86 credits <br />
+                    BS Degree in Electronic Systems: 142 credits
+                  </p>
+                </div>
+              </div>
+
+              <!-- Completion Time -->
+              <div class="flex items-start mb-4">
+                <img
+                  src="/src/assets/time.svg"
+                  class="w-20 h-10 mr-2 rounded-md"
+                />
+                <div>
+                  <p class="font-semibold text-gray-800 mb-1">
+                    Completion time for the BS degree: 4 - 8 years
+                  </p>
+                  <p class="text-gray-700">
+                    The duration depends on the learner’s pace and performance.
+                    Expected engagement is ~10 hours/course/week.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Fees -->
+              <div class="flex items-start">
+                <img src="/src/assets/currency.svg" class="w-10 h-10 mr-4" />
+                <div>
+                  <p class="font-semibold text-gray-800 mb-1">Fees:</p>
+                  <p class="text-gray-700">
+                    Pay only for the courses you register for each semester.
+                    Check the
+                    <a
+                      href="academics.html#AC10"
+                      class="text-blue-500 hover:underline"
+                      >Fee Structure</a
+                    >.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Term Structure -->
+      <div class="container-md px-36 py-4 bg-white flex items-center">
+        <div class="container-fluid container-md">
+          <div class="bg-light p-4 rounded-xl shadow-md">
+            <!-- Online Courses Section -->
+            <div class="flex items-center justify-start mb-6">
+              <div class="mr-6">
+                <img
+                  src="/src/assets/online_course.svg"
+                  class="w-10 h-10"
+                  alt="Online Courses Icon"
+                />
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-0">
+                  Online Courses & Assignments:
+                </p>
+                <p class="text-gray-700">
+                  Duration of each course: 12 weeks - Each week comprises 2-3
+                  hours of videos, practice questions, text transcripts, and
+                  graded assignments - everything made available online.
+                </p>
+              </div>
+            </div>
+
+            <!-- Quizzes and Exams Section -->
+            <div class="flex items-center justify-start mb-6">
+              <div class="mr-6">
+                <img
+                  src="/src/assets/exam.svg"
+                  class="w-10 h-10"
+                  alt="Quizzes Icon"
+                />
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-0">
+                  Quizzes and Exams:
+                </p>
+                <p class="text-gray-700">
+                  In-person invigilated quizzes and exams for all courses.
+                  Additional assessments as per the grading pattern defined for
+                  each course.
+                </p>
+              </div>
+            </div>
+
+            <!-- Lab Exercises Section -->
+            <div class="flex items-center justify-start">
+              <div class="mr-6">
+                <img
+                  src="/src/assets/lab.svg"
+                  class="w-20 h-20"
+                  alt="Lab Icon"
+                />
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800 mb-0">Lab Exercises:</p>
+                <p class="text-gray-700">
+                  Some of the courses of the program are accompanied by lab
+                  sessions, which will be conducted at IIT Madras Campus every
+                  semester. Some may be done online or can be handled through
+                  kits.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Registrations -->
+      <div class="container-md px-36 py-8 bg-white shadow-md">
+        <div
+          class="container-fluid container-md py-5 border border-gray-300 rounded-xl"
+        >
+          <p id="AC3" class="text-3xl font-semibold text-gray-800 px-4">
+            Course Registrations
+          </p>
+          <p class="text-gray-700 px-4">
+            In each term, a learner may register for a maximum of four theory
+            courses. A student doing this program full-time is recommended to
+            take 4 per term, while working professionals and students pursuing
+            other academic programs can take 2 or 3 courses.
+          </p>
+        </div>
+      </div>
+
+      <!-- Assessments -->
+      <div class="container-md px-36 py-8 bg-white shadow-md border-collapse">
+        <div
+          class="container-fluid container-md border border-gray-300 rounded-xl"
+        >
+          <p id="AC4" class="text-3xl font-semibold text-gray-800 px-4">
+            Assessments
+          </p>
+
+          <div class="flex items-center text-gray-700 mt-4">
+            <span class="text-dark mr-2">
+              <i class="fa fa-check"></i>
+            </span>
+            <p class="text-dark">
+              There are 3 types of assessments for each course:<br />
+              <i class="fa fa-dot-circle-o"></i>&nbsp;<u
+                ><b>Weekly Assignments</b></u
+              >
+              (online)<br />
+              <i class="fa fa-dot-circle-o"></i>&nbsp; Monthly in-person
+              <u><b>Quizzes</b></u
+              ><br />
+              <i class="fa fa-dot-circle-o"></i>&nbsp; In-person
+              <u><b>End Term Exam</b></u>
+            </p>
+          </div>
+
+          <div class="flex items-center text-gray-700 mt-4">
+            <span class="text-dark mr-2">
+              <i class="fa fa-check"></i>
+            </span>
+            <p class="text-dark">
+              Some of the courses have <u>lab sessions</u> to be done at home
+              using electronic kits. Students must travel to IIT Madras campus
+              to demonstrate lab experiments.
+            </p>
+          </div>
+
+          <div class="flex items-center text-gray-700 mt-4">
+            <span class="text-dark mr-2">
+              <i class="fa fa-check"></i>
+            </span>
+            <p class="text-dark">
+              In addition, assessments may include programming exams, mini
+              projects, vivas, take-home assignments, etc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-md px-36 py-8 bg-white shadow-md border border-gray-300 rounded-xl"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Text Section -->
+          <div class="col-span-1 space-y-4">
+            <p id="AC9" class="text-3xl font-semibold text-dark">Exam Cities</p>
+
+            <div class="flex text-dark space-x-3">
+              <span class="text-dark w-6">
+                <i class="fa fa-check"></i>
+              </span>
+              <p class="flex-1">
+                The Invigilated Quizzes and End Semester exams are conducted in
+                a number of cities spread across India.
+              </p>
+            </div>
+
+            <div class="flex text-dark space-x-3">
+              <span class="text-dark w-6">
+                <i class="fa fa-check"></i>
+              </span>
+              <p class="flex-1">
+                Exams are also conducted in centres in some countries such as
+                UAE, Bahrain, Kuwait, Oman, Singapore, and Sri Lanka if there
+                are enough students. Learners based out of other countries can
+                take remote proctored exams. Additional exam fees apply for
+                exams outside India.
+              </p>
+            </div>
+
+            <div class="flex text-dark space-x-3">
+              <span class="text-dark w-6">
+                <i class="fa fa-check"></i>
+              </span>
+              <p class="flex-1">
+                The map shows our current Exam Cities List.
+                <span
+                  class="cursor-pointer text-blue-600 font-semibold"
+                  data-toggle="modal"
+                  data-target="#examCities"
+                >
+                  View List <i class="fas fa-chevron-right"></i>
+                </span>
+              </p>
+            </div>
+
+            <div class="flex text-dark space-x-3">
+              <span class="text-dark w-6">
+                <i class="fa fa-check"></i>
+              </span>
+              <p class="flex-1">
+                If you reside outside India and cannot find a centre in your
+                city/country, please write to ge-es@study.iitm.ac.in for
+                assistance.
+              </p>
+            </div>
+
+            <!-- Modal for Exam Cities List -->
+            <div class="modal fade" id="examCities" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <p class="text-3xl font-semibold text-dark modal-title">
+                      Exam Cities List
+                    </p>
+                    <button type="button" class="close" data-dismiss="modal">
+                      <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="text-secondary">Bahrain</p>
+                    <p class="text-dark">Manama</p>
+
+                    <p class="text-secondary">Kuwait</p>
+                    <p class="text-dark">Salmiya</p>
+
+                    <p class="text-secondary">Oman</p>
+                    <p class="text-dark">Muscat</p>
+
+                    <p class="text-secondary">Singapore</p>
+                    <p class="text-dark">Singapore</p>
+
+                    <p class="text-secondary">Sri Lanka</p>
+                    <p class="text-dark">Colombo</p>
+                    <p class="text-dark">Jaffna</p>
+
+                    <p class="text-secondary">UAE</p>
+                    <p class="text-dark">Dubai</p>
+                    <p class="text-dark">Hamdan (AUH)</p>
+                    <p class="text-dark">Sharjah</p>
+
+                    <p class="text-secondary">Andaman And Nicobar Islands</p>
+                    <p class="text-dark">Port Blair</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-light"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Section -->
+          <div
+            class="col-span-1 flex justify-center items-center border border-gray-300 rounded-xl p-4"
+          >
+            <div class="mapContainer w-full">
+              <meta itemprop="name" content="IIT Madras" />
+              <meta itemprop="address" content="IIT Madras, Chennai, India" />
+              <iframe
+                itemprop="hasMap"
+                src="https://www.google.com/maps/d/embed?mid=1anHQdN9iTWQEHNteb4-Wy3rDM7XnElRj"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                class="w-full h-96 rounded-xl"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full bg-white py-5">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Fee Structure Title -->
+        <p id="AC10" class="text-gray-800 text-3xl font-semibold">
+          Fee Structure
+          <span class="text-sm text-gray-500"
+            >(Tentative, to be finalised)</span
+          >
+        </p>
+
+        <div class="w-full mt-5">
+          <!-- Fee Table -->
+          <table
+            class="table-auto w-full text-sm text-gray-600 border-b mb-8 rounded-lg shadow-md"
+          >
+            <thead class="bg-gray-100 text-gray-800">
+              <tr>
+                <th class="px-6 py-3 text-left">Level</th>
+                <th class="px-6 py-3 text-left">Fee per credit</th>
+                <th class="px-6 py-3 text-left">Number of credits</th>
+                <th class="px-6 py-3 text-left">
+                  Fees to be paid at each level (For general category students)*
+                </th>
+                <th class="px-6 py-3 text-left">
+                  Total fees to Earn the Foundation, Diploma &amp; BS degree
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white">
+              <tr class="hover:bg-gray-50">
+                <td
+                  rowspan="2"
+                  class="px-6 py-3 text-center align-middle font-semibold"
+                >
+                  Foundation
+                </td>
+                <td class="px-6 py-3">Rs. 1000</td>
+                <td class="px-6 py-3">8</td>
+                <td class="px-6 py-3">Rs. 8,000</td>
+                <td
+                  rowspan="2"
+                  class="px-6 py-3 text-center align-middle font-semibold"
+                >
+                  Rs. 80,000
+                </td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-3">Rs. 2000</td>
+                <td class="px-6 py-3">36</td>
+                <td class="px-6 py-3">Rs. 72,000</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-3">Diploma</td>
+                <td class="px-6 py-3">Rs. 4000</td>
+                <td class="px-6 py-3">42</td>
+                <td class="px-6 py-3">Rs. 1,68,000</td>
+                <td class="px-6 py-3">Rs. 2,48,000</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-3">BS in Electronic Systems</td>
+                <td class="px-6 py-3">Rs. 6000</td>
+                <td class="px-6 py-3">56</td>
+                <td class="px-6 py-3">Rs. 3,36,000</td>
+                <td class="px-6 py-3">Rs. 5,84,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="mt-4 text-sm text-gray-600">
+            *Fee waiver is not applicable for International students.
+          </p>
+        </div>
+
+        <!-- Fee Waiver Information -->
+        <div class="flex items-start text-gray-800 mt-4">
+          <p class="text-lg mr-2">
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </p>
+          <p class="font-medium">
+            Fee waivers depend on category of learner and family income.
+          </p>
+        </div>
+
+        <!-- Fee Waiver Table -->
+        <div class="mt-4">
+          <table
+            class="table-auto w-full text-sm text-gray-600 border-b mb-8 rounded-lg shadow-md"
+          >
+            <thead class="bg-gray-100 text-gray-800">
+              <tr>
+                <th class="px-6 py-3 text-left">Category of student</th>
+                <th class="px-6 py-3 text-left">Institution fee advance</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white">
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-3">
+                  SC or ST or PwD with >40% disability certificate
+                </td>
+                <td class="px-6 py-3">50%</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-3">
+                  EWS or OBC-NCL category with annual family income between 1-5
+                  LPA
+                </td>
+                <td class="px-6 py-3">50%</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-3">
+                  SC or ST and PwD with >40% disability certificate
+                </td>
+                <td class="px-6 py-3">75%</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-3">
+                  SC or ST or PwD with >40% disability certificate or EWS or
+                  OBC-NCL category AND annual family income less than 1 LPA
+                </td>
+                <td class="px-6 py-3">75%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Additional Information Section -->
+        <div class="flex items-start text-gray-800 mt-4">
+          <p class="text-lg mr-2">
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </p>
+          <p class="font-medium">
+            <u
+              >For candidates who are outside India and studying in the
+              program:</u
+            >
+            For candidates writing exams overseas, there will be a facilitation
+            fee for exams in addition to the above. The fee will be revisited
+            periodically and revised if necessary.
+          </p>
+        </div>
+
+        <div class="flex items-start text-gray-800 mt-4">
+          <p class="text-lg mr-2">
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </p>
+          <p class="font-medium">
+            The term <u>family income</u> for the purpose of availing fee
+            waivers includes the income of the candidate, the income of his/her
+            parents and spouse, also the income of his/her siblings and children
+            below the age of 18 years.<br />
+            <i
+              >Family income certificate is not required while applying for the
+              Degree program, but will be required to avail fee waiver when
+              joining the program.</i
+            ><br />
+            <a
+              href="assets/pdf/Format_family_income_certificate.pdf"
+              download=""
+              target="_blank"
+              class="text-blue-600 hover:underline"
+              ><i>Download Family Income Certificate format</i></a
+            >
+          </p>
+        </div>
+
+        <div class="flex items-start text-gray-800 mt-4">
+          <p class="text-lg mr-2">
+            <i class="fa fa-check" aria-hidden="true"></i>
+          </p>
+          <p class="font-medium">
+            OBC-NCL / EWS certificate, if applicable, need to be obtained in the
+            following format while applying:<br />
+            <a
+              href="assets/pdf/Format_OBC_NCL.pdf"
+              download=""
+              target="_blank"
+              class="text-blue-600 hover:underline"
+              ><i>Download OBC-NCL Certificate format</i></a
+            ><br />
+            <a
+              href="assets/pdf/Format_EWS.pdf"
+              download=""
+              target="_blank"
+              class="text-blue-600 hover:underline"
+              ><i>Download EWS Certificate format</i></a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-md px-10 py-8 bg-white shadow-lg rounded-lg">
+      <div class="container mx-auto py-5">
+        <p id="AC11" class="text-4xl font-semibold text-gray-900">
+          Foundation Level
+        </p>
+
+        <p class="text-gray-700 font-medium mt-2">
+          These courses have been chosen to ensure that the learner who passes
+          these successfully is well prepared to proceed to the Diploma level
+          courses.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 mb-8">
+          <div>
+            <p class="text-2xl text-gray-900 font-semibold">
+              Requirements for registration
+            </p>
+
+            <p class="text-gray-700 font-medium mt-3">
+              <u class="text-primary">Without JEE:</u> The learner should apply
+              for and clear the Qualifier Exam.
+            </p>
+            <p class="text-gray-700 mt-2">
+              <u class="text-primary">With JEE:</u> A student who has qualified
+              for JEE Advanced 2023 is automatically eligible for admission and
+              can register for courses in the foundation level of the BS
+              program.
+            </p>
+
+            <p class="mt-5 text-2xl text-gray-900 font-semibold">Exit</p>
+
+            <p class="text-gray-700 mt-2">
+              Learners have the following two options when they successfully
+              complete all 10 Foundation level courses:
+            </p>
+
+            <div class="mt-3 space-y-3">
+              <div class="flex text-gray-800 items-start">
+                <div class="flex-shrink-0 mr-3">
+                  <i class="fa fa-check-circle text-primary"></i>
+                </div>
+                <p class="font-medium">
+                  Exit: The learner may exit with a Foundational Certificate
+                  from Centre for Outreach and Digital Education (CODE), IIT
+                  Madras.
+                </p>
+              </div>
+
+              <div class="flex text-gray-800 items-start">
+                <div class="flex-shrink-0 mr-3">
+                  <i class="fa fa-check-circle text-primary"></i>
+                </div>
+                <p class="font-medium">
+                  Proceed to next level: The learner can join the
+                  <a
+                    href="#AC12"
+                    class="text-primary font-semibold hover:underline"
+                    >Diploma Level</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between space-y-2"
+          >
+            <div class="flex justify-between">
+              <div class="flex-shrink-0 w-12 h-12">
+                <img src="/src/assets/online_course.svg" alt="icon" />
+              </div>
+              <div>
+                <p class="text-gray-800 font-semibold">9 Theory courses</p>
+                <p class="text-gray-800 font-semibold">5 Laboratories</p>
+                <p class="text-gray-600">43 credits</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between">
+              <div class="flex-shrink-0 w-12 h-12">
+                <img src="/src/assets/time.svg" alt="icon" />
+              </div>
+              <div>
+                <p class="text-gray-800 font-semibold">1 - 3 years</p>
+                <p class="text-gray-600">10 hrs/course/week</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between">
+              <div class="flex-shrink-0 w-12 h-12">
+                <img src="/src/assets/currency.svg" alt="icon" />
+              </div>
+              <div>
+                <p class="text-gray-800 font-semibold">₹80,000*</p>
+                <p class="text-gray-600">
+                  *Refer <a href="#AC10" class="text-primary">Fee Structure</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto mb-4">
+          <p class="mt-0 text-dark text-2xl font-semibold">Courses</p>
+          <p class="text-dark text-lg font-medium">
+            Foundation level comprises the following:
+          </p>
+
+          <table
+            class="min-w-full table-auto border-separate border-spacing-0 text-dark"
+          >
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="py-2 px-4 border-b text-left">Course Name</th>
+                <th class="py-2 px-4 border-b text-left">Credits</th>
+                <th class="py-2 px-4 border-b text-left">Code</th>
+                <th class="py-2 px-4 border-b text-left">Prerequisites</th>
+                <th class="py-2 px-4 border-b text-left">Corequisites</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="hover:bg-gray-50 cursor-pointer"
+                data-url="course_pages/HS1101.html"
+              >
+                <td class="py-2 px-4 border-b">English I</td>
+                <td class="py-2 px-4 border-b text-gray-500">4</td>
+                <td class="py-2 px-4 border-b text-gray-500">HS1101</td>
+                <td class="py-2 px-4 border-b text-gray-500">None</td>
+                <td class="py-2 px-4 border-b text-gray-500">None</td>
+                <td class="py-2 px-4 border-b text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-gray-50 cursor-pointer"
+                data-url="course_pages/MA1101.html"
+              >
+                <td class="py-2 px-4 border-b">Math for Electronics I</td>
+                <td class="py-2 px-4 border-b text-gray-500">4</td>
+                <td class="py-2 px-4 border-b text-gray-500">MA1101</td>
+                <td class="py-2 px-4 border-b text-gray-500">None</td>
+                <td class="py-2 px-4 border-b text-gray-500">None</td>
+                <td class="py-2 px-4 border-b text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+              <!-- Additional rows go here, following the same structure -->
+              <tr
+                class="hover:bg-gray-50 cursor-pointer"
+                data-url="course_pages/HS1102.html"
+              >
+                <td class="py-2 px-4 border-b">English II</td>
+                <td class="py-2 px-4 border-b text-gray-500">4</td>
+                <td class="py-2 px-4 border-b text-gray-500">HS1102</td>
+                <td class="py-2 px-4 border-b text-gray-500">HS1101</td>
+                <td class="py-2 px-4 border-b text-gray-500">None</td>
+                <td class="py-2 px-4 border-b text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-md px-36 py-8 bg-white shadow-md">
+      <p id="AC12" class="h3 font-semibold text-dark">Diploma Level</p>
+
+      <p class="text-dark font-medium">
+        The Diploma level comprises 10 courses (after the Foundation level).
+        Students should complete 20 courses (which includes the 10 Foundation
+        level courses) and earn 86 credits in total to get the Diploma.
+      </p>
+
+      <div class="row mt-3 mb-5 justify-between">
+        <div class="col-12 col-md-7">
+          <p class="h4 text-dark mt-0 font-semibold">
+            Requirements for registration
+          </p>
+
+          <p class="text-dark font-medium mb-4">
+            Only those students who complete courses of the first two semesters
+            will be permitted to proceed with registration of courses in the
+            Diploma level.
+          </p>
+
+          <p class="mt=0 text-dark h4 font-semibold">Exit</p>
+
+          <p class="text-dark font-medium">
+            Learners have the following options based on the courses completed
+            in this level:
+          </p>
+
+          <div class="d-flex text-dark">
+            <div class="w-1/20">
+              <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+            </div>
+
+            <div class="w-19/20">
+              <span class="font-semibold">Option 1:</span> If a learner has
+              completed all the courses and labs in Foundation level and
+              Diploma, they can proceed to the B.S Degree Level.
+            </div>
+          </div>
+
+          <div class="d-flex text-dark">
+            <div class="w-1/20">
+              <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+            </div>
+
+            <div class="w-19/20">
+              <span class="font-semibold">Option 2:</span> They may exit with a
+              Diploma in Electronic Systems from IIT Madras.
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg flex flex-col justify-between space-y-2"
+        >
+          <div class="flex justify-between">
+            <div class="flex-shrink-0 w-12 h-12">
+              <img src="/src/assets/online_course.svg" alt="icon" />
+            </div>
+            <div>
+              <p class="text-gray-800 font-semibold">9 Theory courses</p>
+              <p class="text-gray-800 font-semibold">5 Laboratories</p>
+              <p class="text-gray-600">43 credits</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between">
+            <div class="flex-shrink-0 w-12 h-12">
+              <img src="/src/assets/time.svg" alt="icon" />
+            </div>
+            <div>
+              <p class="text-gray-800 font-semibold">1 - 3 years</p>
+              <p class="text-gray-600">10 hrs/course/week</p>
+            </div>
+          </div>
+
+          <div class="flex justify-between">
+            <div class="flex-shrink-0 w-12 h-12">
+              <img src="/src/assets/currency.svg" alt="icon" />
+            </div>
+            <div>
+              <p class="text-gray-800 font-semibold">₹80,000*</p>
+              <p class="text-gray-600">
+                *Refer <a href="#AC10" class="text-primary">Fee Structure</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <p class="text-3xl font-semibold text-gray-800 mb-4">Courses</p>
+
+        <p class="text-gray-600 mb-6">
+          Foundation level comprises the following:
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="min-w-full table-auto border-collapse">
+            <thead class="bg-gray-100">
+              <tr>
+                <th
+                  class="px-4 py-2 text-left text-sm font-medium text-gray-700"
+                >
+                  Course Name
+                </th>
+                <th
+                  class="px-4 py-2 text-left text-sm font-medium text-gray-700"
+                >
+                  Credits
+                </th>
+                <th
+                  class="px-4 py-2 text-left text-sm font-medium text-gray-700"
+                >
+                  Code
+                </th>
+                <th
+                  class="px-4 py-2 text-left text-sm font-medium text-gray-700"
+                >
+                  Prerequisites
+                </th>
+                <th
+                  class="px-4 py-2 text-left text-sm font-medium text-gray-700"
+                >
+                  Corequisites
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-sm text-gray-700">
+              <!-- Repeat this row structure for each course -->
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                onclick="window.location.href='course_pages/HS1101.html'"
+              >
+                <td class="px-4 py-3">English I</td>
+                <td class="px-4 py-3 text-gray-500 italic">4</td>
+                <td class="px-4 py-3 text-gray-500 italic">HS1101</td>
+                <td class="px-4 py-3 text-gray-500 italic">None</td>
+                <td class="px-4 py-3 text-gray-500 italic">None</td>
+                <td class="px-4 py-3 text-right">
+                  <a href="#" class="text-primary hover:text-primary-dark"
+                    ><i class="fa fa-chevron-right"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                onclick="window.location.href='course_pages/MA1101.html'"
+              >
+                <td class="px-4 py-3">Math for Electronics I</td>
+                <td class="px-4 py-3 text-gray-500 italic">4</td>
+                <td class="px-4 py-3 text-gray-500 italic">MA1101</td>
+                <td class="px-4 py-3 text-gray-500 italic">None</td>
+                <td class="px-4 py-3 text-gray-500 italic">None</td>
+                <td class="px-4 py-3 text-right">
+                  <a href="#" class="text-primary hover:text-primary-dark"
+                    ><i class="fa fa-chevron-right"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                onclick="window.location.href='course_pages/HS1102.html'"
+              >
+                <td class="px-4 py-3">English II</td>
+                <td class="px-4 py-3 text-gray-500 italic">4</td>
+                <td class="px-4 py-3 text-gray-500 italic">HS1102</td>
+                <td class="px-4 py-3 text-gray-500 italic">HS1101</td>
+                <td class="px-4 py-3 text-gray-500 italic">None</td>
+                <td class="px-4 py-3 text-right">
+                  <a href="#" class="text-primary hover:text-primary-dark"
+                    ><i class="fa fa-chevron-right"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                onclick="window.location.href='course_pages/EE1101.html'"
+              >
+                <td class="px-4 py-3">
+                  Electronic Systems Thinking and Circuits
+                </td>
+                <td class="px-4 py-3 text-gray-500 italic">4</td>
+                <td class="px-4 py-3 text-gray-500 italic">EE1101</td>
+                <td class="px-4 py-3 text-gray-500 italic">None</td>
+                <td class="px-4 py-3 text-gray-500 italic">None</td>
+                <td class="px-4 py-3 text-right">
+                  <a href="#" class="text-primary hover:text-primary-dark"
+                    ><i class="fa fa-chevron-right"></i
+                  ></a>
+                </td>
+              </tr>
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                onclick="window.location.href='course_pages/EE1901.html'"
+              >
+                <td class="px-4 py-3">
+                  Electronic Systems Thinking and Circuits Lab
+                </td>
+                <td class="px-4 py-3 text-gray-500 italic">1</td>
+                <td class="px-4 py-3 text-gray-500 italic">EE1901</td>
+                <td class="px-4 py-3 text-gray-500 italic">None</td>
+                <td class="px-4 py-3 text-gray-500 italic">EE1101</td>
+                <td class="px-4 py-3 text-right">
+                  <a href="#" class="text-primary hover:text-primary-dark"
+                    ><i class="fa fa-chevron-right"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-md px-36 py-8 bg-white shadow-md">
+      <div class="container-fluid container-sm py-5">
+        <p id="AC16" class="text-3xl font-semibold text-dark">
+          BS Degree Level
+        </p>
+
+        <p class="text-dark font-medium">
+          The BS level comprises 12 courses and one optional Apprenticeship.
+          Students should earn a total of 142 credits through all levels to get
+          the BS Degree.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-3 mb-5">
+          <div>
+            <p class="text-2xl text-dark font-semibold mt-0">
+              Requirements for registration
+            </p>
+
+            <p class="text-dark font-medium mb-4">
+              Only those students who complete courses of 1st FOUR Semesters
+              will be permitted to register for courses in Degree level.
+            </p>
+
+            <p class="mt-0 text-dark text-2xl font-semibold">Exit</p>
+
+            <p class="text-dark font-medium">
+              Once the learner successfully completes 142 credits and the course
+              requirements, they will be awarded a BS Degree in Electronic
+              Systems from IIT Madras.
+            </p>
+          </div>
+
+          <div class="bg-white py-3 px-4 rounded-lg">
+            <div class="flex justify-between">
+              <div class="flex-basis-1/12">
+                <img src="assets/img/academics/Academics_icon-01.svg" />
+              </div>
+
+              <div class="flex-basis-11/12">
+                <p class="text-dark font-semibold mb-0">12 Theory courses</p>
+                <p class="text-dark font-semibold mb-0">1 Laboratory</p>
+
+                <p class="text-dark font-medium">56 credits</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between">
+              <div class="flex-basis-1/12">
+                <img src="assets/img/academics/Academics_icon-02.svg" />
+              </div>
+
+              <div class="flex-basis-11/12">
+                <p class="text-dark font-semibold mb-0">1 - 3 years</p>
+
+                <p class="text-dark font-medium">10 hrs/course/week</p>
+              </div>
+            </div>
+
+            <div class="flex justify-between">
+              <div class="flex-basis-1/12">
+                <img src="assets/img/academics/Academics_icon-03.svg" />
+              </div>
+
+              <div class="flex-basis-11/12">
+                <p class="text-dark font-semibold mb-0">₹3,36,000*</p>
+
+                <p class="text-dark font-medium">
+                  *Refer <a href="#AC10" class="text-blue-600">Fee Structure</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto mb-4">
+          <p class="mt-0 text-dark text-2xl font-semibold">Core Courses</p>
+
+          <p class="text-dark font-medium">
+            These are the core courses in the degree level. It is mandatory for
+            the learner to complete all core courses.
+          </p>
+
+          <table class="min-w-full border-b text-dark">
+            <thead>
+              <tr>
+                <th class="px-4 py-2">Course Name</th>
+                <th class="px-4 py-2">Credits</th>
+                <th class="px-4 py-2">Code</th>
+                <th class="px-4 py-2">Prerequisites</th>
+                <th class="px-4 py-2">Corequisites</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE4101.html"
+              >
+                <td class="px-4 py-2">Embedded Linux and FPGAs</td>
+                <td class="px-4 py-2 italic text-gray-500">4</td>
+                <td class="px-4 py-2 italic text-gray-500">EE4101</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 text-blue-600 text-right">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE4901.html"
+              >
+                <td class="px-4 py-2">Embedded Linux and FPGAs Lab</td>
+                <td class="px-4 py-2 italic text-gray-500">1</td>
+                <td class="px-4 py-2 italic text-gray-500">EE4901</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 italic text-gray-500">EE4101</td>
+                <td class="px-4 py-2 text-blue-600 text-right">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE3105.html"
+              >
+                <td class="px-4 py-2">
+                  Electromagnetic Fields and Transmission Lines
+                </td>
+                <td class="px-4 py-2 italic text-gray-500">4</td>
+                <td class="px-4 py-2 italic text-gray-500">EE3105</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 text-blue-600 text-right">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE4102.html"
+              >
+                <td class="px-4 py-2">Electronic Product Design</td>
+                <td class="px-4 py-2 italic text-gray-500">4</td>
+                <td class="px-4 py-2 italic text-gray-500">EE4102</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 text-blue-600 text-right">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="../../ds/course_pages/BSGN3001.html"
+              >
+                <td class="px-4 py-2">Strategies for Professional Growth</td>
+                <td class="px-4 py-2 italic text-gray-500">4</td>
+                <td class="px-4 py-2 italic text-gray-500">GN3001</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 italic text-gray-500">None</td>
+                <td class="px-4 py-2 text-blue-600 text-right">
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Department Electives -->
+        <div class="table-responsive-sm mb-4">
+          <p class="mt-0 text-dark text-2xl font-semibold">
+            Department Electives
+          </p>
+          <p class="text-dark text-base font-normal">
+            The following courses are proposed as Department Electives at the
+            degree level. 5 courses have to be taken from this list of 9 courses
+            given here to satisfy the 5 department electives (20 credits).
+          </p>
+
+          <table class="table-auto border-b text-dark w-full mt-4">
+            <thead>
+              <tr>
+                <th class="px-4 py-2">Course Name</th>
+                <th class="px-4 py-2">Credits</th>
+                <th class="px-4 py-2">Code</th>
+                <th class="px-4 py-2">Prerequisites</th>
+                <th class="px-4 py-2">Corequisites</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/MA3101.html"
+              >
+                <td class="px-4 py-2">Probability and Statistics</td>
+                <td class="px-4 py-2 text-gray-600 italic">4</td>
+                <td class="px-4 py-2 text-gray-600 italic">MA3101</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr class="cursor-not-allowed">
+                <td class="px-4 py-2">Communication Systems</td>
+                <td class="px-4 py-2 text-gray-600 italic">4</td>
+                <td class="px-4 py-2 text-gray-600 italic">EE4103</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-right">
+                  <!-- Disabled icon -->
+                </td>
+              </tr>
+
+              <tr class="cursor-not-allowed">
+                <td class="px-4 py-2">Internet of Things (IoT)</td>
+                <td class="px-4 py-2 text-gray-600 italic">4</td>
+                <td class="px-4 py-2 text-gray-600 italic">EE5101</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-right">
+                  <!-- Disabled icon -->
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE3106.html"
+              >
+                <td class="px-4 py-2">
+                  Semiconductor Devices and VLSI Technology
+                </td>
+                <td class="px-4 py-2 text-gray-600 italic">4</td>
+                <td class="px-4 py-2 text-gray-600 italic">EE3106</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE3107.html"
+              >
+                <td class="px-4 py-2">Analog circuits</td>
+                <td class="px-4 py-2 text-gray-600 italic">4</td>
+                <td class="px-4 py-2 text-gray-600 italic">EE3107</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE5102.html"
+              >
+                <td class="px-4 py-2">Digital IC Design</td>
+                <td class="px-4 py-2 text-gray-600 italic">4</td>
+                <td class="px-4 py-2 text-gray-600 italic">EE5102</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE5103.html"
+              >
+                <td class="px-4 py-2">
+                  Power Management for Electronic Systems
+                </td>
+                <td class="px-4 py-2 text-gray-600 italic">4</td>
+                <td class="px-4 py-2 text-gray-600 italic">EE5103</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="cursor-pointer hover:bg-gray-100"
+                data-url="course_pages/EE5104.html"
+              >
+                <td class="px-4 py-2">Biomedical Electronic Systems</td>
+                <td class="px-4 py-2 text-gray-600 italic">4</td>
+                <td class="px-4 py-2 text-gray-600 italic">EE5104</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-gray-600 italic">None</td>
+                <td class="px-4 py-2 text-right">
+                  <a class="text-blue-500"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Open Electives -->
+        <div class="table-responsive-sm mb-4">
+          <p class="mt-0 text-dark text-2xl font-semibold">Open Electives</p>
+
+          <table class="table-auto border-b w-full text-dark">
+            <thead>
+              <tr>
+                <th class="px-4 py-2 text-left">Code</th>
+                <th class="px-4 py-2 text-left">Course Name</th>
+                <th class="px-4 py-2 text-left">Credits</th>
+                <th class="px-4 py-2"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS4022.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS4022</td>
+                <td class="px-4 py-2">Operating Systems</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS2001.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS2001</td>
+                <td class="px-4 py-2">Database Management Systems (DBMS)</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS2002.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS2002</td>
+                <td class="px-4 py-2">
+                  Programming Data Structures and Algorithms using Python
+                </td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS2003.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS2003</td>
+                <td class="px-4 py-2">Modern Application Development I</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS2004.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS2004</td>
+                <td class="px-4 py-2">Machine Learning Foundation</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS2005.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS2005</td>
+                <td class="px-4 py-2">Programming Concepts using Java</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS2006.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS2006</td>
+                <td class="px-4 py-2">Modern Application Development II</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS2007.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS2007</td>
+                <td class="px-4 py-2">Machine Learning Techniques</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS2008.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS2008</td>
+                <td class="px-4 py-2">Machine Learning Practice</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS3004.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS3004</td>
+                <td class="px-4 py-2">Deep Learning</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSCS5003.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">CS5003</td>
+                <td class="px-4 py-2">Deep Learning for Computer Vision</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSEE4001.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">EE4001</td>
+                <td class="px-4 py-2">Speech Technology</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSDA5013.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">DA5013</td>
+                <td class="px-4 py-2">Deep Learning Practice</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSMS4001.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">MS4001</td>
+                <td class="px-4 py-2">Industry 4.0</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSMS4002.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">MS4002</td>
+                <td class="px-4 py-2">
+                  Design Thinking for Data-Driven App Development
+                </td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <tr
+                class="hover:bg-gray-100 cursor-pointer"
+                data-url="../../ds/course_pages/BSGN3002.html"
+              >
+                <td class="px-4 py-2 font-italic text-gray-600">GN3002</td>
+                <td class="px-4 py-2">Smart Cities</td>
+                <td class="px-4 py-2 font-italic text-gray-600">4</td>
+                <td class="px-4 py-2">
+                  <a class="text-primary float-right"
+                    ><i class="fa fa-chevron-right" aria-hidden="true"></i
+                  ></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-0 text-dark text-xl font-semibold">
+          Total non-CGPA credits that can be transferred
+        </p>
+        <p class="text-dark font-medium">
+          A maximum of 24 credits is permitted in this category, which includes
+          courses taken in person at other institutes approved by the program,
+          credits earned through apprenticeship (4/8) or NPTEL courses (open
+          electives: up to 8 maximum and HS/MG: 4 maximum)
+        </p>
+      </div>
+    </div>
+
+    <!-- Sample Certificates -->
+    <div class="w-full bg-light py-4">
+      <div class="container mx-auto px-8">
+        <p id="AC17" class="text-3xl font-semibold text-dark mb-6">
+          Sample Certificates
+        </p>
+
+        <!-- Sample Certificates Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- BS Degree in Electronic Systems -->
+          <div class="flex flex-col items-center">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#BS"
+              class="mb-2 focus:outline-none"
+              style="border: none; padding: 0"
+            >
+              <img
+                src="/src/assets/BS_1.jpg"
+                alt="BS Degree Certificate"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </button>
+
+            <p class="text-dark text-center mt-2">
+              BS Degree in Electronic Systems
+            </p>
+          </div>
+
+          <!-- Diploma in Electronic Systems -->
+          <div class="flex flex-col items-center">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#bSc"
+              class="mb-2 focus:outline-none"
+              style="border: none; padding: 0"
+            >
+              <img
+                src="/src/assets/BS-2.jpg"
+                alt="Diploma Certificate"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </button>
+
+            <p class="text-dark text-center mt-2">
+              Diploma in Electronic Systems
+            </p>
+          </div>
+
+          <!-- Foundation in Electronic Systems -->
+          <div class="flex flex-col items-center">
+            <button
+              type="button"
+              data-toggle="modal"
+              data-target="#diplomaProgramming"
+              class="mb-2 focus:outline-none"
+              style="border: none; padding: 0"
+            >
+              <img
+                src="/src/assets/bs-3.jpg"
+                alt="Foundation Certificate"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+              />
+            </button>
+
+            <p class="text-dark text-center mt-2">
+              Foundation in Electronic Systems
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- </div> -->
+
+    <footer id="footer" class="bg-blue-400 py-6">
+      <div class="container max-w-4xl mx-auto">
+        <div class="text-white text-2xl font-semibold">Contact Us</div>
+
+        <!-- Location Section -->
+        <div class="pt-4 pb-4">
+          <div class="flex text-white">
+            <div class="w-12">
+              <img
+                class="w-20 h-10 rounded-md"
+                src="/src/assets/send.svg"
+                alt="Location Icon"
+              />
+            </div>
+            <div class="ml-4">
+              IITM BS Degree Office, 3rd Floor, ICSR Building,<br />
+              IIT Madras, Chennai - 600036
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Section -->
+        <div class="pt-4 pb-4">
+          <div class="flex text-white">
+            <div class="w-12">
+              <img
+                class="w-10 h-10"
+                src="/src/assets/call.svg"
+                alt="Phone Icon"
+              />
+            </div>
+            <div class="ml-4">
+              +91-9711397993 (Mon-Fri 9am-6pm)<br />
+              support-es@study.iitm.ac.in
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="pt-4 pb-6 border-b border-white flex justify-between">
+          <div class="hidden md:block text-white">
+            <small>© IIT Madras. All rights reserved.</small>
+          </div>
+          <div class="md:hidden text-white text-center pt-4">
+            <a
+              class="mr-3"
+              href="https://www.facebook.com/profile.php?id=100090678393589"
+              target="_blank"
+            >
+              <img
+                class="w-8"
+                src="assets/img/homepage/Footer%20icon-facebook.svg"
+                alt="Facebook"
+              />
+            </a>
+            <a
+              class="mr-3"
+              href="https://www.instagram.com/iitmadras_es/"
+              target="_blank"
+            >
+              <img
+                class="w-8"
+                src="assets/img/homepage/Footer%20icon-instagram.svg"
+                alt="Instagram"
+              />
+            </a>
+            <a
+              class="mr-3"
+              href="https://twitter.com/iitmadras_es"
+              target="_blank"
+            >
+              <img
+                class="w-8"
+                src="assets/img/homepage/Footer%20icon-twitter.svg"
+                alt="Twitter"
+              />
+            </a>
+            <a
+              class="mr-3"
+              href="https://www.linkedin.com/company/iit-madras-bs-in-electronic-systems/"
+              target="_blank"
+            >
+              <img
+                class="w-8"
+                src="assets/img/homepage/Footer%20icon-linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Links Section -->
+        <div class="py-3 flex justify-between">
+          <div class="hidden md:flex">
+            <a
+              class="mr-3"
+              href="https://www.facebook.com/profile.php?id=100090678393589"
+              target="_blank"
+            >
+              <img
+                class="w-8 rounded-md"
+                src="/src/assets/facebook.svg"
+                alt="Facebook"
+              />
+            </a>
+            <a
+              class="mr-3"
+              href="https://www.instagram.com/iitmadras_es/"
+              target="_blank"
+            >
+              <img
+                class="w-8 rounded-md"
+                src="/src/assets/instagram.svg"
+                alt="Instagram"
+              />
+            </a>
+            <a
+              class="mr-3"
+              href="https://twitter.com/iitmadras_es"
+              target="_blank"
+            >
+              <img
+                class="w-8 rounded-md"
+                src="/src/assets/twitter.svg"
+                alt="Twitter"
+              />
+            </a>
+            <a
+              class="mr-3"
+              href="https://www.linkedin.com/company/iit-madras-bs-in-electronic-systems/"
+              target="_blank"
+            >
+              <img
+                class="w-8 rounded-md"
+                src="/src/assets/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+          <div class="col-12 col-md-6 text-right text-white">
+            <span class="cursor-pointer mr-4">Honour Code</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
